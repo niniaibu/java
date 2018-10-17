@@ -34,6 +34,9 @@ class FloatingTypeTest {
         assertFalse(isNan(Double.POSITIVE_INFINITY));
     }
 
+
+
+
     @Test
     void should_not_round_number_when_convert_to_integer() {
         final float floatingPointNumber = 2.75f;
