@@ -1,6 +1,7 @@
 package com.cultivation.javaBasic;
 
 import org.junit.jupiter.api.Test;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -33,10 +34,13 @@ class FloatingTypeTest {
         assertFalse(isNan(Double.POSITIVE_INFINITY));
     }
 
+
+
+
     @Test
     void should_not_round_number_when_convert_to_integer() {
-        final float floatingPointNunber = 2.75f;
-        final int integer = (int)floatingPointNunber;
+        final float floatingPointNumber = 2.75f;
+        final int integer = (int)floatingPointNumber;
 
         // TODO: Please change the result to pass the test.
         // <!--start
@@ -46,9 +50,7 @@ class FloatingTypeTest {
         assertEquals(expected, integer);
     }
 
-
-
-
+    @SuppressWarnings("unused")
     @Test
     void should_round_number() {
         final double floatingPointNumber = 2.75;
@@ -64,19 +66,24 @@ class FloatingTypeTest {
     @SuppressWarnings("unused")
     private boolean isNan(double realNumber) {
         // TODO: please implement the method to pass the test.
-        return Double.isNaN(realNumber);
+
+        throw new NotImplementedException();
     }
 
     @SuppressWarnings("unused")
     private boolean isInfinity(double realNumber) {
         // TODO: please implement the method to pass the test.
-        return Double.isInfinite(realNumber);
+        if(realNumber == Double.POSITIVE_INFINITY || realNumber ==Double.NEGATIVE_INFINITY){
+            return true;
+        }else
+            return false;
+        // throw new NotImplementedException();
     }
 
     /*
      * The coach should ask the following questions for the correspond test method:
      *
-     * - Can we compare NaN using == directly?
-     * - Can we compare XXX_INFINITY using == directly?
+     * - Can we compare NaN using == directly?  No
+     * - Can we compare XXX_INFINITY using == directly? Yes
      */
 }

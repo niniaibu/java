@@ -114,8 +114,8 @@ class IntegerTypeTest {
 
         // TODO: please modify the following lines to pass the test
         // <!--start
-        final double expectedResult1 = 0;
-        final double expectedResult2 = 3;
+        final double expectedResult1 = 0.0;
+        final double expectedResult2 = 3.0;
         // --end-->
 
         assertEquals(expectedResult1, result1, +1.0E-05);
@@ -169,9 +169,12 @@ class IntegerTypeTest {
 
     private int add(int left, int right) {
         // TODO: Please implement the method. Adding two numbers.
-        //
         // The method should throw ArithmeticException if overflow or underflow happens.
-        return Math.addExact(left, right);
+        int sum = left + right;
+        if(((left ^ sum) & (right ^ sum)) < 0){
+            throw new ArithmeticException("integer overflow");
+        }
+        return sum;
     }
 
     /*
