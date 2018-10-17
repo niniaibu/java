@@ -15,7 +15,7 @@ class FloatingTypeTest {
 
         // TODO: Please change the result to pass the test.
         // <!--start
-        final int expected = Integer.MAX_VALUE;
+        final int expected = 2;
         // --end-->
 
         assertEquals(expected, integer);
@@ -41,7 +41,7 @@ class FloatingTypeTest {
 
         // TODO: Please change the result to pass the test.
         // <!--start
-        final int expected = Integer.MAX_VALUE;
+        final int expected = 2;
         // --end-->
 
         assertEquals(expected, integer);
@@ -54,7 +54,7 @@ class FloatingTypeTest {
 
         // TODO: Please call some method to round the floating point number.
         // <!--start
-        final long rounded = Long.MAX_VALUE;
+        final long rounded = Math.round(floatingPointNumber);
         // --end-->
 
         assertEquals(3L, rounded);
@@ -63,19 +63,24 @@ class FloatingTypeTest {
     @SuppressWarnings("unused")
     private boolean isNan(double realNumber) {
         // TODO: please implement the method to pass the test.
+
         throw new NotImplementedException();
     }
 
     @SuppressWarnings("unused")
     private boolean isInfinity(double realNumber) {
         // TODO: please implement the method to pass the test.
-        throw new NotImplementedException();
+        if(realNumber == Double.POSITIVE_INFINITY || realNumber ==Double.NEGATIVE_INFINITY){
+            return true;
+        }else
+            return false;
+        // throw new NotImplementedException();
     }
 
     /*
      * The coach should ask the following questions for the correspond test method:
      *
-     * - Can we compare NaN using == directly?
-     * - Can we compare XXX_INFINITY using == directly?
+     * - Can we compare NaN using == directly?  No
+     * - Can we compare XXX_INFINITY using == directly? Yes
      */
 }
