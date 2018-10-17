@@ -18,7 +18,7 @@
 
 - **主要问题：** 讨论所得，应该是java中存在直接判断的方法，如`isInfinity`和`isNaN`函数，可是没有其实现方法，可是测试代码中需要重新调用，如何查看函数源码呢或者底层函数如何实现？
 
-> gcontinue to learn
+> continue to learn
 
 
 
@@ -40,4 +40,4 @@
 
 - **主要问题：** 在查询四舍五入函数时候会有使用`BigDecimal`，会有使用`DecimalFormat`，格式控制和`Math.round`函数，一般都在什么条件下使用？
 
-> gcontinue to learn
+> continue to learn
