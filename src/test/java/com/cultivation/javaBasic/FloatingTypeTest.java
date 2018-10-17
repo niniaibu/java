@@ -46,6 +46,9 @@ class FloatingTypeTest {
         assertEquals(expected, integer);
     }
 
+
+
+
     @Test
     void should_round_number() {
         final double floatingPointNumber = 2.75;
