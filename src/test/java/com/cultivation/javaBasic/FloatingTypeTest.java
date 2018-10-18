@@ -1,11 +1,8 @@
 package com.cultivation.javaBasic;
 
 import org.junit.jupiter.api.Test;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FloatingTypeTest {
     @Test
@@ -33,9 +30,6 @@ class FloatingTypeTest {
         assertFalse(isNan(Double.NEGATIVE_INFINITY));
         assertFalse(isNan(Double.POSITIVE_INFINITY));
     }
-
-
-
 
     @Test
     void should_not_round_number_when_convert_to_integer() {
@@ -66,17 +60,22 @@ class FloatingTypeTest {
     @SuppressWarnings("unused")
     private boolean isNan(double realNumber) {
         // TODO: please implement the method to pass the test.
-
-        throw new NotImplementedException();
+        return Double.isNaN(realNumber);
+        // throw new NotImplementedException();
     }
 
     @SuppressWarnings("unused")
     private boolean isInfinity(double realNumber) {
         // TODO: please implement the method to pass the test.
-        if(realNumber == Double.POSITIVE_INFINITY || realNumber ==Double.NEGATIVE_INFINITY){
-            return true;
-        }else
-            return false;
+
+        //nini_own implement
+        // if(realNumber == Double.POSITIVE_INFINITY || realNumber ==Double.NEGATIVE_INFINITY){
+        //     return true;
+        // }else
+        //     return false;
+
+        //invoking function
+        return Double.isInfinite(realNumber);
         // throw new NotImplementedException();
     }
 

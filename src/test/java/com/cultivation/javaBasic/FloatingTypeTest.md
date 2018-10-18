@@ -16,9 +16,12 @@
 
 - **查询地址：** [Double类中的isInfinity函数](https://docs.oracle.com/javase/10/docs/api/java/lang/Double.html#isInfinite(double))、[Double类中的isNaN函数](https://docs.oracle.com/javase/10/docs/api/java/lang/Double.html#isNaN(double))
 
-- **主要问题：** 讨论所得，应该是java中存在直接判断的方法，如`isInfinity`和`isNaN`函数，可是没有其实现方法，可是测试代码中需要重新调用，如何查看函数源码呢或者底层函数如何实现？
+- **主要问题：** 讨论所得，应该是java中存在直接判断的方法，如`isInfinity`和`isNaN`函数，可是没有其实现方法，可是测试代码中需要重新调用，如何查看函数源码呢或者底层函数如何实现？（直接调用底层函数不关心底层实现）
 
 > continue to learn
+> 这里是分割线==================
+
+- **修改2：** 直接调用Double类型的`isInfinity`和`isNaN`函数
 
 
 
@@ -40,4 +43,5 @@
 
 - **主要问题：** 在查询四舍五入函数时候会有使用`BigDecimal`，会有使用`DecimalFormat`，格式控制和`Math.round`函数，一般都在什么条件下使用？
 
-> continue to learn
+
+

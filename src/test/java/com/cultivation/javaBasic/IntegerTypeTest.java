@@ -170,11 +170,16 @@ class IntegerTypeTest {
     private int add(int left, int right) {
         // TODO: Please implement the method. Adding two numbers.
         // The method should throw ArithmeticException if overflow or underflow happens.
+
+        // nini own implement
         int sum = left + right;
         if(((left ^ sum) & (right ^ sum)) < 0){
             throw new ArithmeticException("integer overflow");
         }
         return sum;
+
+        //invoking function
+        // return Integer.sum(left, right); //数据溢出时会报错
     }
 
     /*
